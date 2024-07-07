@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Exercise6Model
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Daniel Mears' Spinutech Code Test</h1>
+    <p>Below are the exersises I have worked on</p>
+    <hr />
+    <h2>Exercise 6</h2>
+    <p>
+        Please implement a function that checks whether a positive number is a palindrome or not. For
+        example, 121 is a palindrome, but 123 is not.
+    </p>
+    @using (Html.BeginForm("CheckExercise6InputPost", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(model => model.InputText)
+        <button class="btn btn-primary" type="submit">Check Input</button>
+    }
+    <div class="result">@Model.OutputText</div>
+</div>
